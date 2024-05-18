@@ -16,6 +16,7 @@ export function deserialize(input: string) {
 }
 
 export function parse(input: string): Infer<typeof S.Main> {
+  return deserialize(input)
   const decoded = decode(input);
   const deserialized = deserialize(decoded);
   return deserialized;

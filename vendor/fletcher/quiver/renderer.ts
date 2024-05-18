@@ -12,10 +12,11 @@ export function encode(input: string): string {
 }
 
 export function serialize(input: unknown): string {
-  return JSON.stringify(input);
+  return JSON.stringify(input, null, 2);
 }
 
 export function render(input: Infer<typeof S.Main>): string {
+  return serialize(input)
   const serialized = serialize(input);
   const encoded = encode(serialized);
   return encoded;
