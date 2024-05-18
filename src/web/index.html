@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>fletcher demo</title>
+</head>
+
+<body class="flex flex-col w-screen h-screen overflow-hidden">
+  <main class="bg-slate-50 h-full" data-controller="main">
+    <button data-action="click->main#transform" class="w-full h-full col-span-2">Transform</button>
+    <select data-main-target="sourceLang" class="h-full">
+      <option value="amscd">AMSCD</option>
+      <option value="quiver">Quiver i.r.</option>
+      <option value="fletcher">Fletcher i.r.</option>
+    </select>
+    <select data-main-target="targetLang" class="h-full">
+      <option value="amscd">AMSCD</option>
+      <option value="quiver">Quiver i.r.</option>
+      <option value="fletcher">Fletcher i.r.</option>
+    </select>
+    <textarea data-main-target="sourceCode" class="w-full h-full"></textarea>
+    <textarea data-main-target="targetCode" class="w-full h-full"></textarea>
+  </main>
+
+  <script type="module" src="index.ts"></script>
+</body>
+
+</html>
