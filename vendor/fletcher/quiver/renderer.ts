@@ -12,7 +12,7 @@ export function encode(input: string): string {
 }
 
 export function serialize(input: unknown): string {
-  return JSON.stringify(input, null, 2);
+  return JSON.stringify(input);
 }
 
 export function render(input: Infer<typeof S.Main>): string {
